@@ -33,7 +33,7 @@ src="https://www.facebook.com/tr?id=29143883788609210&ev=PageView&noscript=1"
   --border: #2a2a30;
   --radius: 14px;
 }
-- { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   background: var(--bg);
   color: var(--text);
@@ -438,10 +438,8 @@ document.addEventListener("DOMContentLoaded", function() {
   if (search) search.addEventListener("input", render);
   const langSel = $("#languageSelect");
   if (langSel) langSel.addEventListener("change", function(e) { setLang(e.target.value); });
-  // 底部大按鈕 → 直接下載 + 追蹤 bottom_big_download
   const bigBtn = $("#bigDownload");
   if (bigBtn) bigBtn.addEventListener("click", function(){ download('bottom_big_download'); });
-  // 查看更多按鈕 → 也直接下載 + 追蹤 bottom_see_more
   const moreBtn = $("#moreBtn");
   if (moreBtn) moreBtn.addEventListener("click", function(){ download('bottom_see_more'); });
   let pref = "auto";
